@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Попов Роман Игоревич — Специалист по автоматизации и AI-интеграциям. Портфолио, опыт, проекты.">
+    <title>Попов Роман — AI & Automation Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated background canvas -->
+    <canvas id="particles-canvas"></canvas>
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Loading screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-text">
+                <span>R</span><span>P</span>
+            </div>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Roman</span>
+                <span class="logo-slash">/</span>
+                <span class="logo-bracket">&gt;</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active"><span class="nav-num">01</span>Главная</a></li>
+                <li><a href="#about" class="nav-link"><span class="nav-num">02</span>Обо мне</a></li>
+                <li><a href="#skills" class="nav-link"><span class="nav-num">03</span>Навыки</a></li>
+                <li><a href="#experience" class="nav-link"><span class="nav-num">04</span>Опыт</a></li>
+                <li><a href="#projects" class="nav-link"><span class="nav-num">05</span>Проекты</a></li>
+                <li><a href="#contact" class="nav-link"><span class="nav-num">06</span>Контакты</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-bg">
+                <div class="grid-pattern"></div>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-tag" data-reveal>
+                    <span class="status-dot"></span>
+                    <span>Доступен для проектов</span>
+                </div>
+                <h1 class="hero-title" data-reveal>
+                    <span class="line">Привет, я <span class="gradient-text">Роман</span></span>
+                    <span class="line">создаю <span class="typed-text" id="typed"></span><span class="cursor-blink">|</span></span>
+                </h1>
+                <p class="hero-subtitle" data-reveal>
+                    Специалист по <strong>автоматизации</strong> и <strong>AI-интеграциям</strong> с
+                    <span class="highlight-num">7+</span> летним опытом — от технического обслуживания
+                    до разработки корпоративных решений с нейросетями.
+                </p>
+                <div class="hero-cta" data-reveal>
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Мои проекты</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <span>Связаться</span>
+                    </a>
+                </div>
+                <div class="hero-stats" data-reveal>
+                    <div class="stat">
+                        <div class="stat-num" data-count="7">0</div>
+                        <div class="stat-label">лет в IT</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" data-count="30">0</div>
+                        <div class="stat-label">проектов</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" data-count="6">0</div>
+                        <div class="stat-label">AI-моделей</div>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-indicator" aria-label="Прокрутить вниз">
+                <div class="mouse"><div class="wheel"></div></div>
+                <span>scroll</span>
+            </a>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <span class="section-num">// 02</span>
+                    <h2 class="section-title">Обо <span class="gradient-text">мне</span></h2>
+                    <p class="section-desc">От железа к нейросетям — путь длиной в 7 лет</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text" data-reveal>
+                        <p>
+                            Я IT-специалист, прошедший путь от <span class="kw">технического обслуживания</span>
+                            и ремонта компьютерного оборудования до разработки корпоративных решений
+                            с интеграцией <span class="kw">искусственного интеллекта</span>.
+                        </p>
+                        <p>
+                            С 2020 года параллельно занимаюсь <span class="kw">веб-разработкой</span>,
+                            с 2022 — погрузился в мир <span class="kw">AI-интеграций</span>.
+                            Работал с GPT-4, Claude, Gemini, Llama; запускал собственный
+                            сервер на базе Llama; создавал телеграм-ботов с интеграцией AI.
+                        </p>
+                        <p>
+                            Моя страсть — превращать рутинные процессы в элегантные
+                            автоматизированные системы, экономящие часы человеческой работы.
+                        </p>
+
+                        <div class="education">
+                            <h3 class="block-title">Образование</h3>
+                            <div class="edu-item">
+                                <div class="edu-year">2018–2021</div>
+                                <div class="edu-info">
+                                    <strong>РГППУ</strong>
+                                    <span>Педагог профессионального высшего учебного заведения</span>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <div class="edu-year">2014–2018</div>
+                                <div class="edu-info">
+                                    <strong>Уральский политехнический колледж</strong>
+                                    <span>Техник по компьютерным системам</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cards" data-reveal>
+                        <div class="info-card glass">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/>
+                                </svg>
+                            </div>
+                            <h4>Ключевые компетенции</h4>
+                            <ul>
+                                <li>Технические решения</li>
+                                <li>Автоматизация процессов</li>
+                                <li>Нейросети и LLM</li>
+                            </ul>
+                        </div>
+                        <div class="info-card glass">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+                                </svg>
+                            </div>
+                            <h4>Технологический стек</h4>
+                            <div class="tech-chips">
+                                <span>Python</span>
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>API</span>
+                                <span>RFID</span>
+                                <span>AI/ML</span>
+                            </div>
+                        </div>
+                        <div class="info-card glass">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <h4>Языки и инструменты</h4>
+                            <p class="muted">C++, C#, Python, JavaScript, WordPress, Linux/Ubuntu, паяльная станция</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <span class="section-num">// 03</span>
+                    <h2 class="section-title">Что <span class="gradient-text">я умею</span></h2>
+                    <p class="section-desc">Полный спектр навыков от железа до облака</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card" data-reveal data-skill-level="95">
+                        <div class="skill-icon">&lt;/&gt;</div>
+                        <h3>HTML & CSS</h3>
+                        <p>Адаптивная верстка, современный CSS, анимации</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--level:95%"></div></div>
+                    </div>
+                    <div class="skill-card" data-reveal data-skill-level="90">
+                        <div class="skill-icon">W</div>
+                        <h3>WordPress</h3>
+                        <p>Кастомные темы, интернет-магазины, плагины</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--level:90%"></div></div>
+                    </div>
+                    <div class="skill-card highlighted" data-reveal data-skill-level="95">
+                        <div class="skill-icon">AI</div>
+                        <h3>AI Интеграции</h3>
+                        <p>GPT-4, Claude, Gemini, Llama, DeepSeek через API</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--level:95%"></div></div>
+                    </div>
+                    <div class="skill-card highlighted" data-reveal data-skill-level="93">
+                        <div class="skill-icon">⚙</div>
+                        <h3>Автоматизация</h3>
+                        <p>Python-скрипты, бизнес-процессы, экономия часов</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--level:93%"></div></div>
+                    </div>
+                    <div class="skill-card" data-reveal data-skill-level="88">
+                        <div class="skill-icon">📡</div>
+                        <h3>RFID-Учет</h3>
+                        <p>Внедрение RFID-меток для инвентаризации ТМЦ</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--level:88%"></div></div>
+                    </div>
+                    <div class="skill-card" data-reveal data-skill-level="85">
+                        <div class="skill-icon">🐧</div>
+                        <h3>Linux & Ubuntu</h3>
+                        <p>Развертывание серверов, настройка окружений</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--level:85%"></div></div>
+                    </div>
+                    <div class="skill-card" data-reveal data-skill-level="92">
+                        <div class="skill-icon">🔧</div>
+                        <h3>Сборка и ремонт ПК</h3>
+                        <p>Полный цикл от диагностики до восстановления</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--level:92%"></div></div>
+                    </div>
+                    <div class="skill-card" data-reveal data-skill-level="80">
+                        <div class="skill-icon">⚡</div>
+                        <h3>Радиомонтаж</h3>
+                        <p>4 разряд монтажника РЭАиП, работа с платами</p>
+                        <div class="skill-bar"><div class="skill-fill" style="--level:80%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="experience" id="experience">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <span class="section-num">// 04</span>
+                    <h2 class="section-title">Опыт <span class="gradient-text">работы</span></h2>
+                    <p class="section-desc">Хронология профессионального пути</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item current" data-reveal>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-period">Сентябрь 2019 — наст. время</div>
+                            <h3>Ведущий менеджер по учёту</h3>
+                            <h4>АО «ПФ «СКБ Контур» · Отдел УОФ</h4>
+                            <ul>
+                                <li>Разработка программы-аналога 1С для внутреннего использования</li>
+                                <li>Автоматизация процессов учёта с помощью скриптов</li>
+                                <li>Внедрение RFID-меток для инвентаризации ТМЦ</li>
+                                <li>Интеграция нейросети DeepSeek R1 в корпоративный сервис</li>
+                                <li>Разработка внутреннего сайта для публикации б/у мебели</li>
+                            </ul>
+                            <span class="timeline-tag">Текущая роль</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-period">2020 — наст. время</div>
+                            <h3>Разработчик сайтов · Фриланс</h3>
+                            <h4>Веб-разработка и AI-интеграции</h4>
+                            <ul>
+                                <li>Интернет-магазины и корпоративные сайты на WordPress</li>
+                                <li>Дизайн с нуля и адаптивная верстка</li>
+                                <li>Интеграция нейросетей через API</li>
+                                <li>Разработка персонального аналога ChatGPT</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-period">Дек 2021 — Март 2025</div>
+                            <h3>Монтажник РЭАиП (ГПХ)</h3>
+                            <h4>Подработка · 4 разряд</h4>
+                            <ul>
+                                <li>Сборка компьютерного оборудования</li>
+                                <li>Монтаж печатных плат на заказ</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-period">Янв 2019 — Сен 2019</div>
+                            <h3>Специалист по ремонту кассового оборудования</h3>
+                            <h4>ООО «Контур НТТ»</h4>
+                            <ul>
+                                <li>Ремонт кассовых аппаратов с паяльной станцией</li>
+                                <li>Работа с измерительными приборами</li>
+                                <li>Выявление дефектов и ремонт плат</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-period">2018</div>
+                            <h3>Мастер вычислительного центра</h3>
+                            <h4>Завод «Вектор» · Практика</h4>
+                            <ul>
+                                <li>Ремонт компьютерного оборудования</li>
+                                <li>Диагностика и ремонт блоков питания</li>
+                                <li>Восстановление материнских плат</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-period">Лето 2017</div>
+                            <h3>Специалист по тестированию</h3>
+                            <h4>ООО «Контур НТТ»</h4>
+                            <ul>
+                                <li>Тестирование нового кассового оборудования</li>
+                                <li>Прошивка касс и мелкий ремонт</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-reveal>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-period">2017</div>
+                            <h3>Помощник системного администратора</h3>
+                            <h4>СКБ Контур · Практика</h4>
+                            <ul>
+                                <li>Установка и настройка рабочих мест</li>
+                                <li>Решение технических заявок сотрудников</li>
+                                <li>Настройка и ремонт МФУ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements" data-reveal>
+                    <h3 class="block-title centered">Ключевые достижения</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <div class="ach-num">01</div>
+                            <p>Система автоматической обработки заявок на базе нейросети <strong>DeepSeek R1</strong></p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ach-num">02</div>
+                            <p>Цифровая платформа для управления внутренними ресурсами компании</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ach-num">03</div>
+                            <p>Внедрение <strong>RFID-технологий</strong> для автоматизации инвентаризации</p>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ach-num">04</div>
+                            <p>Интерфейсы для интеграции с корпоративными системами</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <span class="section-num">// 05</span>
+                    <h2 class="section-title">Избранные <span class="gradient-text">проекты</span></h2>
+                    <p class="section-desc">Реальные продукты, которые приносят пользу</p>
+                </div>
+
+                <div class="projects-grid">
+                    <a href="http://popov-roman.ru/gpt/" target="_blank" rel="noopener" class="project-card glass" data-reveal>
+                        <div class="project-image gradient-1">
+                            <div class="project-emoji">🤖</div>
+                            <div class="project-glow"></div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-cat">AI · Web App</span>
+                            <h3>Персональный аналог ChatGPT</h3>
+                            <p>Веб-интерфейс для работы с LLM, локальный сервер на базе Llama.</p>
+                            <div class="project-tags">
+                                <span>Llama 3.1</span><span>API</span><span>Web UI</span>
+                            </div>
+                            <div class="project-link">
+                                Открыть проект
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="http://m9955623.beget.tech/index.html" target="_blank" rel="noopener" class="project-card glass" data-reveal>
+                        <div class="project-image gradient-2">
+                            <div class="project-emoji">🔮</div>
+                            <div class="project-glow"></div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-cat">AI · Entertainment</span>
+                            <h3>Чтение карт Таро с AI</h3>
+                            <p>Сайт для гадания с интеграцией DeepSeek для интерпретации.</p>
+                            <div class="project-tags">
+                                <span>DeepSeek</span><span>JavaScript</span><span>CSS</span>
+                            </div>
+                            <div class="project-link">
+                                Открыть проект
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://галанин-и-партнёры.рф/" target="_blank" rel="noopener" class="project-card glass" data-reveal>
+                        <div class="project-image gradient-3">
+                            <div class="project-emoji">🚛</div>
+                            <div class="project-glow"></div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-cat">SaaS · Logistics</span>
+                            <h3>Планировщик грузоперевозок</h3>
+                            <p>Внутренний сервис отслеживания перевозок ТМЦ в реальном времени.</p>
+                            <div class="project-tags">
+                                <span>Real-time</span><span>Admin Panel</span>
+                            </div>
+                            <div class="project-link">
+                                Открыть проект
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://oclock-mxm.ru/" target="_blank" rel="noopener" class="project-card glass" data-reveal>
+                        <div class="project-image gradient-4">
+                            <div class="project-emoji">⌚</div>
+                            <div class="project-glow"></div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-cat">Web · Service</span>
+                            <h3>Сайт по ремонту часов</h3>
+                            <p>Система поиска и отслеживания статуса заказа клиента.</p>
+                            <div class="project-tags">
+                                <span>PHP</span><span>Database</span><span>Tracking</span>
+                            </div>
+                            <div class="project-link">
+                                Открыть проект
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://t.me/kontur_live_bot" target="_blank" rel="noopener" class="project-card glass" data-reveal>
+                        <div class="project-image gradient-5">
+                            <div class="project-emoji">💬</div>
+                            <div class="project-glow"></div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-cat">Bot · Python</span>
+                            <h3>Телеграм-бот для Контура</h3>
+                            <p>Бот для записи на экскурсии и связи с сотрудниками.</p>
+                            <div class="project-tags">
+                                <span>Telegram API</span><span>Python</span>
+                            </div>
+                            <div class="project-link">
+                                Открыть проект
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H8M17 7v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="project-card glass private" data-reveal>
+                        <div class="project-image gradient-6">
+                            <div class="project-emoji">🛒</div>
+                            <div class="project-glow"></div>
+                        </div>
+                        <div class="project-body">
+                            <span class="project-cat">E-commerce · Bot</span>
+                            <h3>Магазин в Телеграм</h3>
+                            <p>Бот для продажи стройматериалов с каталогом, корзиной и оплатой.</p>
+                            <div class="project-tags">
+                                <span>Telegram API</span><span>Payment</span><span>E-com</span>
+                            </div>
+                            <div class="project-link disabled">
+                                Коммерческий проект
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 17v.01M12 14a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <span class="section-num">// 06</span>
+                    <h2 class="section-title">Давайте <span class="gradient-text">работать вместе</span></h2>
+                    <p class="section-desc">Открыт для интересных проектов и сотрудничества</p>
+                </div>
+
+                <div class="contact-grid">
+                    <a href="tel:+79126294416" class="contact-card glass" data-reveal>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Телефон</span>
+                            <strong>8 (912) 629-44-16</strong>
+                        </div>
+                    </a>
+
+                    <a href="mailto:romap41@yandex.ru" class="contact-card glass" data-reveal>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Email</span>
+                            <strong>romap41@yandex.ru</strong>
+                        </div>
+                    </a>
+
+                    <a href="https://t.me/Romashka_mordashka" target="_blank" rel="noopener" class="contact-card glass" data-reveal>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005-.002l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.643.135-.953l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Telegram</span>
+                            <strong>@Romashka_mordashka</strong>
+                        </div>
+                    </a>
+
+                    <a href="https://vk.com/romashka_mordashka" target="_blank" rel="noopener" class="contact-card glass" data-reveal>
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.13C2 20.67 3.33 22 8.93 22h6.13C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2zm3.07 14.27h-1.45c-.55 0-.72-.44-1.71-1.43-.86-.83-1.24-.94-1.45-.94-.3 0-.39.09-.39.5v1.31c0 .35-.11.56-1.04.56-1.53 0-3.22-.93-4.42-2.65C5.88 11.07 5.39 9.16 5.39 8.78c0-.21.09-.4.5-.4h1.45c.37 0 .51.17.65.57.71 2.06 1.91 3.86 2.4 3.86.19 0 .27-.09.27-.56V10.13c-.06-.99-.58-1.07-.58-1.42 0-.16.13-.33.35-.33h2.28c.31 0 .42.16.42.54v2.86c0 .31.14.42.23.42.19 0 .35-.11.7-.46 1.07-1.2 1.84-3.06 1.84-3.06.1-.21.27-.41.65-.41h1.45c.43 0 .53.22.43.54-.18.83-1.92 3.29-1.92 3.29-.15.25-.21.36 0 .65.15.21.65.65.99 1.04.61.7 1.08 1.29 1.21 1.69.13.41-.08.62-.5.62z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">VKontakte</span>
+                            <strong>@romashka_mordashka</strong>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="cta-block" data-reveal>
+                    <h3>Есть проект или идея?</h3>
+                    <p>Напишите мне — обсудим, как нейросети и автоматизация могут упростить вашу работу.</p>
+                    <a href="mailto:romap41@yandex.ru" class="btn btn-primary btn-large">
+                        <span>Написать письмо</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Roman<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+                </div>
+                <p>Создаю автоматизированные решения с душой</p>
+            </div>
+            <div class="footer-right">
+                <p>© 2026 Попов Роман Игоревич</p>
+                <p class="muted">Создано с ❤ и большим количеством кофе</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
